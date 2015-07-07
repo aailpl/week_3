@@ -1,0 +1,23 @@
+<h1>Show</h1>
+
+<h2><%= @post.title %> </h2>
+<p class="content"><%= @post.body %></p>
+<p class="posted-at">Posted on <span class="date"><%= @post.date %></span></p>
+
+<div class="comments">
+	<% @comments.each do |comment|%>
+		<div class="comment-body">			
+			<p class="comment-content"><%= comment.body %></p>
+			<a class="delete-link" href="/show/<%= @post.id%>/delete?comment_id=<%= comment.id%>"><img class="delete" src="http://icons.iconarchive.com/icons/rafiqul-hassan/blogger/512/Close-icon.png"></a>
+		</div>
+		
+		<p class="comment-info">Posted by <span><%= comment.author %></p></span>
+	<%end%>
+</div>
+<form class="comment-input" method="post" action="/show/<%= @post.id%>">
+	<input placeholder="Please Comment" name="comment">
+	<input placeholder="your name" name="author">
+	<button>Submit</button>
+</form>
+
+<a class="return" href="/">Return</a>

@@ -1,0 +1,15 @@
+<!-- 
+<link rel="stylesheet" type="text/css" href="/main.css">
+<form method="GET" action="/">
+	<p>How old are you?</p>
+	<input name="age">
+	<button>Submit</button>
+</form>
+<% #if @answer %>
+	<h1><%= @answer%></h1>
+<%#end%> -->
+
+<form method="GET" action="/answer">
+	<input type="number" name="age">
+	<button>Submit</button>
+</form>

@@ -1,0 +1,29 @@
+
+
+<h1>Show</h1>
+<h2><%= @post.title %> </h2>
+<p class="content"><%= @post.body %></p>
+<p class="posted-at">Posted on <span class="date"><%= @post.date %></span></p>
+<div class="container">
+	<div class="comments">
+	<% @comments.each do |comment|%>
+		<div  class="panel panel-info">
+			<div class="panel-heading"><%= comment.author %></div>
+			<p class="comment-content"><%= comment.body %></p>
+		</div>	
+	<%end%>
+</div>
+<div class="input-group">
+      <input type="text" class="form-control" placeholder="Fell free to comment">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Submit</button>
+      </span>
+</div><!-- /input-group -->
+<nav>
+  <ul class="pager">
+    <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+    <li class="next"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
+  </ul>
+</nav>
+<a class="return" href="/">Return</a>
+</div>

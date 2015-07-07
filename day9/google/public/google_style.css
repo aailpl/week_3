@@ -1,0 +1,163 @@
+/**{border-style: solid; }*/
+
+html,body{
+	font-size: 18px;
+	font-family: arial,sans-serif;
+	font-weight: normal;	
+	line-height: 18px; 
+
+	margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+.search{
+	display: flex;
+	align-items: center; 
+	background-color: #f1f1f1;
+    box-sizing: border-box;
+
+}
+
+.left{
+	width: 100%;
+	padding: 15px;
+	display: flex;
+	align-items: center; 
+
+    box-sizing: border-box;
+}
+
+.right{
+	padding-left: 30px;
+	padding-right: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center; 
+	height: 30px;
+	width: 197px;
+}
+
+.user-name{
+	height: 24px;
+	font-family: arial, sans-serif;
+	font-size: 13px;
+	opacity: 0.550000011920929;
+	line-height: 24px;
+	padding-right: 15px;
+}
+
+.notification{
+	margin: 5px;
+	padding-right: 2px; 
+	padding-left:2px;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.85098);
+	width: 15px;
+	height: 15px;
+	padding: 5px;
+}
+
+.right-menu
+{
+	height: 30px;
+	width: 30px;
+}
+.google-icon{
+	margin-right: 10px;
+	height: 37px;
+	width: 95px;
+}
+.search-bar {
+	  padding: 5px 9px 5px;
+	  font-size: 13px;
+	  width: 50%;
+	  height: 28px;
+	  border-bottom-left-radius: 2px;
+	  border-top-left-radius: 2px;
+
+	  
+	 /* border-bottom-width: 1px;*/
+}
+
+.search-button{
+	width: 58px;
+	height: 28px;
+	background-color: rgb(48, 121, 237);
+	border-style: none;
+	background-image: url(search-icon-white-one-hi.png);
+	background-size: 30%;
+	background-repeat: no-repeat;
+	background-position: center; 
+	border-bottom-right-radius: 2px;
+	border-top-right-radius: 2px;
+}
+.result, .options{
+	display: flex;
+}
+.options{
+	border-bottom-color: rgb(235, 235, 235);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;	
+	height: 60px;
+	
+
+}
+
+.tools{
+	margin: 0px 8px;
+	padding: 0px 8px;
+	color: #777;
+	font-size: small;
+	display: flex;
+	align-items:center;
+}
+
+.active{
+
+	border-bottom-color: rgb(221, 75, 57);
+	border-bottom-style: solid;
+	border-bottom-width: 3px;
+	color: rgb(221, 75, 57);
+}
+
+.first{
+	padding-left: 20px;
+	border-style: none;
+}
+.search-tools:hover .serach-tools-button{
+	display: block;
+}
+
+.search-tools-button{
+	display: none;	
+}
+
+.content {
+	width: 50%;
+}
+
+.result-element{
+	list-style-type: none;
+	padding: 8px;
+	text-align: left;
+}
+
+.title{
+	color: #609;	
+	margin: 0px;
+}
+
+.link{
+	font-size: 14px;
+	color: #006621;
+}
+
+.description{
+  font-size: small;
+  color: #545454;
+}
+
+.advertise{
+	width: 25%;
+}

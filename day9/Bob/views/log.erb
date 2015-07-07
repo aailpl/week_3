@@ -1,0 +1,9 @@
+
+<link rel="stylesheet" type="text/css" href="/main.css">
+<form method="GET" action="/">
+	<input name="message">
+	<button>Submit</button>
+</form>
+<% if @answer %>
+	<h1><%= @answer%></h1>
+<%end%>
