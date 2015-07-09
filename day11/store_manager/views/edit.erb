@@ -1,0 +1,24 @@
+<div class="container">
+	<h1></h1>
+	<form action="/update/<%= @product.id%>" method="get">
+		<div class="form-group">
+			<label for="name">Name</label>
+			<input  type="text" id="name" name="name" value="<%= @product.name %>" class="form-control">
+		</div>
+		<div class="form-group">
+			<label for="price">Price</label>
+			<input  type="text" name="price" value="<%= @product.price %>" class="form-control">
+		</div>
+		<div class="form-group">
+			<label for="brand">Brand</label>
+			<input  type="text" id="brand" name="brand" value="<%= @product.brand %>" class="form-control">
+		</div>
+		<div class="form-group">
+			<label for="details">Details</label>
+			<textarea name="details" id="details" rows="2" cols="50"  class="form-control"><%= @product.details %></textarea>
+		</div>
+		<button class="btn btn-default">Save</button>
+	</form>
+	<h1></h1>	
+</div>
+	

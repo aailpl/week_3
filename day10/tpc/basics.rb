@@ -21,13 +21,16 @@ get '/more/*' do
   params[:splat]
 end
 
-get '/form' do
+get '/form' do  
+  if params.key?('message')
+  	return "You said #{params[:message]}"
+  end
   erb :form
 end
 
-post '/form' do
-  "You said '#{params[:message]}'"
-end
+# post '/form' do
+#   "You said '#{params[:message]}'"
+# end
 
 get '/secret' do
   erb :secret

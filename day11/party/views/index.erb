@@ -1,0 +1,45 @@
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-4"></div>
+		<div class="col-xs-4"><h1 class="text-center">Welcome to PARTY</h1></div>
+		<div class="col-xs-4"></div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12"><h1></h1></div>
+	</div>
+	<div class="row">
+		<div class="col-xs-2"></div>
+		<div class="col-xs-8">
+			<table class="table table-bordered text-center table-hover">
+			  <tr>
+			  	<th class="active text-center">Event</th>
+			  	<th class="active text-center">Date</th>
+			  	<th class="active text-center">Location</th>
+			  </tr>
+			  <% @parties.each do |party|%>
+			  	<tr>
+			  		<td><a class="text-muted" href="/<%= party.id %>/edit?name"><strong><%= party.name %></strong></a></td>
+			  		<td><a class="text-muted" href="/<%= party.id %>/edit?date"><%= party.date.strftime("%e %B %Y at %k:%M") %></a></td>
+			  		<td class="anchor">
+			  			<a class="text-muted" href="/<%= party.id %>/edit?location"><%= party.location %></a>
+			  			<div class="dropdown offset">
+						  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						    More
+						    <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						    <li><a href="/<%= party.id %>">Details</a></li>
+						    <li><a href="/<%= party.id %>/delete">Remove</a></li>
+						    <li><a href="/new">New</a></li>
+						  </ul>
+						</div>			  			
+			  		</td>  			
+			  	</tr>
+			  	
+			  <% end %>
+			</table>
+		</div>
+		<div class="col-xs-2"></div>
+	</div>
+</div>
