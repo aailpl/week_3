@@ -32,10 +32,27 @@ parties = [
 
 # list of all parties
 get '/' do
-  @parties = parties
+
+	if params.key?("search_by")
+		select = parties.select do |party|
+			(party.send params[:search_by].to_sym).upcase  == params[:search].upcase
+		end
+
+		if select.empty?
+			redirect '/error'
+		else
+			@parties = select
+		end
+		
+	else
+		@parties = parties
+	end
+  
   erb :index
 end
+post '/' do
 
+end
 # form to create a new party
 get '/new' do
   erb :new
@@ -49,6 +66,10 @@ post '/create' do
   redirect '/'
 end
 
+get '/error' do
+   status 404
+  'not found'
+end
 
 # show individual post
 get '/:id' do
@@ -109,3 +130,4 @@ get '/:id/delete' do
 	end
 	redirect '/'
 end
+
